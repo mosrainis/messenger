@@ -1,4 +1,17 @@
 <header>
-  <h1>Section Title</h1>
+  <h2>Section Title</h2>
 </header>
-<router-outlet></router-outlet>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+<footer>
+  <div class="sec-link">
+    <a [routerLink]="['contacts']"><h6>Contacts</h6></a>
+  </div>
+  <div class="sec-link">
+    <a [routerLink]="['chat']"><h6>Chats</h6></a>
+  </div>
+  <div class="sec-link">
+    <a [routerLink]="['']"><h6>Settings</h6></a>
+  </div>
+</footer>
