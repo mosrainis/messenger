@@ -1,8 +1,27 @@
-<div class="contacts-co">
-    <div class="user-co">
-        
+<div class="contacts-co" *ngIf="contacts; else:ntFound">
+    <div class="user-co" *ngFor="let user of contacts">
+        <div class="user-header">
+            <div class="info-co">
+                <h4 class="user-status">Online</h4>
+                <h2 class="user-name">{{user.last_name}}</h2>
+            </div>
+            <div class="avatar-co">
+                <img class="avatar" src="{{user.avatar}}">
+            </div>
+        </div>
+        <div class="bio-co">
+            <span><mat-icon class="bio-icon">whatshot</mat-icon></span><p class="bio-messege">Stars only visiable at darkness</p>
+        </div>
     </div>
 </div>
-<ng-template #noCnt>
-    No Contacts Found!
+
+<ng-template #ntFound>
+    <div class="not-found-co" *ngIf="!onLoading">
+        <mat-icon class="nf-icon">person_outline</mat-icon>
+        <p class="nt-messege">No Contacts Found</p>
+    </div>
 </ng-template>
+
+<div class="loading-co" *ngIf="onLoading">
+    <img class="loading" src="../../../assets/loading.svg" alt="Loading icon">
+</div>

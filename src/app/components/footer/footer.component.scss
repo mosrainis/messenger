@@ -13,3 +13,25 @@ footer {
     color: rgba(154, 140, 141, 1);
     font-size: 35px;
 }
+
+a {
+    outline: none;
+}
+
+.sec-link {
+    text-align: center;
+    width: 30%;
+    
+    .tab-name {
+        color: #9a8c8d;
+        font-size: 0;
+        display: 0;
+    }
+}
+
+.link-active {
+    .tab-name {
+       display: 1;
+       font-size: 14px;
+    }
+}

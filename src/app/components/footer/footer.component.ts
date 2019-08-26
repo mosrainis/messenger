@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { DataDeliveryService } from 'src/app/services/data-delivery.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  sectionName //Tabs name
+
+  constructor(
+    private delivery: DataDeliveryService
+  ) { }
 
   ngOnInit() {
+    this.getTabName()
+  }
+
+  getTabName() {
+    this.delivery.sectionName.subscribe(result => {
+      this.sectionName = result
+    })
   }
 
 }

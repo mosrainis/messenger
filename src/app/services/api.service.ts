@@ -14,6 +14,6 @@ export class ApiService {
   ) { }
 
   getUsers(): Observable<Response> {
-    return this.http.get<Response>("https://reqres.in/api/users")
+    return this.http.get<Response>("https://reqres.in/api/users?delay=1") 
   }
 }

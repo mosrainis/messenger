@@ -1,1 +1,35 @@
-<p>chat works!</p>
+<div class="chat-co" *ngIf="contacts">
+    <div class="user-co">
+        <div class="messege-co">
+            <div class="avatar-co">
+                <img class="avatar" src="{{contacts[0].avatar}}">
+            </div>
+            <div class="user-info">
+                <h4 class="user-name">{{contacts[0].last_name}}</h4>
+                <p class="last-messege">Yo, wanna hang out?</p>
+            </div>
+        </div>
+        <div class="chat-info">
+            <p class="last-time">10:17PM</p>
+        </div>        
+    </div>
+
+    <div class="user-co">
+            <div class="messege-co">
+                <div class="avatar-co">
+                    <img class="avatar" src="{{contacts[1].avatar}}">
+                </div>
+                <div class="user-info">
+                    <h4 class="user-name">{{contacts[1].last_name}}</h4>
+                    <p class="last-messege">Hi, Are you OK bro?</p>
+                </div>
+            </div>
+            <div class="chat-info">
+                <p class="last-time">Jul 26</p>
+            </div>        
+        </div>
+</div>
+
+<div class="loading-co" *ngIf="onLoading">
+    <img class="loading" src="../../../assets/loading.svg" alt="Loading icon">
+</div>

@@ -1,0 +1,95 @@
+.contacts-co {
+    overflow-y: auto;
+}
+
+.user-co {
+    border-bottom: 2px solid #ebeaea;
+}
+
+.user-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .info-co {
+        padding-right: 5px;
+        
+        h4 {
+            color: #442b2d;
+            font-weight: inherit;
+            margin-top: 15px;
+            margin-left: 8px;
+            letter-spacing: 1.79%;
+        }
+
+        h2 {
+            color: #442b2d;
+            font-weight: inherit;
+            margin-left: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+    }
+
+    .avatar-co {
+        margin-top: 15px;
+        margin-right: 30px;
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.bio-co {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .bio-icon {
+        margin: 0px 5px;
+        font-size: 28px;
+        color: #0000008a;
+    }
+
+    .bio-messege {
+        line-height: 30px;
+    }
+}
+
+.not-found-co {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .nf-icon {
+        font-size: 150px;
+        padding: 0;
+        margin: 0;
+        color: #9a8c8d;
+    }
+
+    .nt-messege {
+        font-size: 22px;
+        color: #9a8c8d;
+    }
+}
+
+.loading-co {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .loading {
+        width: 80px;
+        height: 80px;
+    }
+}
+
